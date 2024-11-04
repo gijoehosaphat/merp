@@ -36,8 +36,8 @@
   "packs": [],
   "packFolders": [],
   "socket": false,
-  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
-  "download": "This must link to a .zip file of the current version",
+  "manifest": "https://raw.githubusercontent.com/gijoehosaphat/merp/refs/heads/main/system.json",
+  "download": "https://github.com/gijoehosaphat/merp/archive/refs/heads/main.zip",
   "background": "systems/merp/assets/anvil-impact.png",
   "grid": {
     "distance": 5,
