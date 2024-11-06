@@ -1,0 +1,136 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "stats": {
+        "strength": 20,
+        "agility": 20,
+        "constitution": 20,
+        "intelligence": 20,
+        "ituition": 20,
+        "presence": 20,
+        "appearence": 0
+      },
+      "skills": {
+        "movementAndManeuver": {
+          "noArmour": 0,
+          "softLeather": 0,
+          "hardLeather": 0,
+          "chain": 0,
+          "plate": 0
+        },
+        "weaponSkills": {
+          "oneHandedEdged": 0,
+          "oneHandedConcussion": 0,
+          "twoHanded": 0,
+          "thrown": 0,
+          "missile": 0,
+          "poleArms": 0
+        },
+        "generalSkills": {
+          "climb": 0,
+          "ride": 0,
+          "swim": 0,
+          "track": 0
+        },
+        "subterfugeSkills": {
+          "ambush": 0,
+          "stalkHide": 0,
+          "pickLocks": 0,
+          "disarmTraps": 0
+        },
+        "magicalSkills": {
+          "readRunes": 0,
+          "useItems": 0,
+          "directedSpells": 0
+        },
+        "miscellaneous": {
+          "perception": 0,
+          "bodyDevelopment": 0
+        },
+        "secondarySkills": {
+          "acrobatics": 0,
+          "acting": 0,
+          "animalHandling": 0,
+          "appraisal": 0,
+          "boatHandling": 0,
+          "caving": 0,
+          "contortions": 0,
+          "cookery": 0,
+          "firstAid": 0,
+          "foraging": 0,
+          "gambling": 0,
+          "meditation": 0,
+          "publicSpeaking": 0,
+          "ropeMastery": 0,
+          "signaling": 0,
+          "skyWatching": 0,
+          "trickery": 0
+        }
+      }
+    },
+    "details": {
+      "name": "",
+      "cultureRace": "",
+      "profession": "",
+      "age": 0,
+      "realm": "",
+      "gender": "",
+      "height": 0,
+      "weight": 0,
+      "hair": "",
+      "eyes": "",
+      "demeanor": "",
+      "personality": "",
+      "motivation": "",
+      "alignment": "",
+      "special": ""
+    },
+    "currency": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "copper": 0,
+      "tin": 0
+    }
+  },
+  "Item": {
+    "types": ["weapon", "armor", "equipment"],
+    "templates": {
+      "base": {
+        "cost": 0,
+        "weight": 0,
+        "type": ""
+      }
+    },
+    "weapon": {
+      "templates": ["base"],
+      "range": 0,
+      "fumbleRangeMin": 0,
+      "fumbleRangeMax": 0,
+      "primaryCritical": {
+        "type": "",
+        "level": ""
+      },
+      "secondaryCritical": {
+        "type": "",
+        "level": ""
+      },
+      "offensiveBonus": {
+        "noArmour": 0,
+        "softLeather": 0,
+        "hardLeather": 0,
+        "chain": 0,
+        "plate": 0
+      }
+    },
+    "armor": {
+      "templates": ["base"],
+      "armorType": "",
+      "armorBonus": 0
+    },
+    "equipment": {
+      "templates": ["base"]
+    }
+  }
+}

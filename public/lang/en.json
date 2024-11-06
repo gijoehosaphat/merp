@@ -1,0 +1,61 @@
+{
+  "character": {
+    "skillColumns": {
+      "skill": "Skill",
+      "rank5": "5% Rank",
+      "rank2": "2% Rank",
+      "rankBonus": "Rank Bonus",
+      "statBonus": "Stat Bonus",
+      "professionBonus": "Profession Bonus",
+      "itemBonus": "Item Bonus",
+      "specialBonus": "Special Bonus",
+      "totalBonus": "Total Bonus"
+    },
+    "categoryNames": {
+      "movementAndManeuver": "Movement & Maneuver Skill Category:",
+      "weaponSkills": "Weapon Skill Skill Category",
+      "generalSkills": "General Skill Category",
+      "subterfugeSkills": "Subterfuge Skill Category",
+      "magicalSkills": "Magical Skill Category",
+      "miscellaneousSkills": "Miscellaneous & Secondary Skills and Bonuses"
+    }
+  },
+  "MERP": {
+    "ability": {
+      "St": { "long": "Strength", "abbr": "st" },
+      "Co": { "long": "Constitution", "abbr": "co" },
+      "Ag": { "long": "Agility", "abbr": "ag" },
+      "Ig": { "long": "Intelligence", "abbr": "ig" },
+      "In": { "long": "Intuition", "abbr": "in" },
+      "Pr": { "long": "Presence", "abbr": "pr" }
+    },
+    "criticalTypes": {
+      "heat": "Heat",
+      "cold": "Cold",
+      "electricity": "Electricity",
+      "impact": "Impact",
+      "crush": "Crush",
+      "slash": "Slash",
+      "puncture": "Puncture",
+      "unbalancing": "Unbalancing",
+      "grappling": "Grappling",
+      "largeCreaturePhysical": "Large Creature (Physical)",
+      "largeCreatureSpell": "Large Creature (Spell)"
+    },
+    "weaponSkills": {
+      "oneHandedEdged": "One-Handed Edged",
+      "oneHandedConcussion": "One-Handed Concussion",
+      "twoHanded": "Two-Handed",
+      "thrown": "Thrown",
+      "missile": "Missile",
+      "poleArms": "Pole Arms"
+    },
+    "weapon": {
+      "type": "Type",
+      "primaryCritical": "Primary Critical",
+      "secondaryCritical": "Secondary Critical",
+      "range": "Base Range",
+      "weight": "Weight"
+    }
+  }
+}

@@ -19,7 +19,7 @@ Regardless of which method you choose, think carefully about your system's name.
 This system includes a generator CLI in `package.json`. To use it, you must have [node.js](https://nodejs.org) installed, and it's recommended that you install node 20 or later.
 
 > **Python Generator**
-> 
+>
 > If you would rather use Python than node, there’s an excellent Python-based generator created by Cussa at https://github.com/Cussa/fvtt-merp-initializator. Give it a shot!
 
 Once you have npm installed, you can run the following in your terminal or command prompt:

@@ -1,0 +1,84 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img
+      src="{{item.img}}"
+      data-edit="img"
+      title="{{item.name}}"
+      height="64"
+      width="64"
+    />
+    <h1>
+      <input
+        name="name"
+        type="text"
+        value="{{item.name}}"
+        placeholder="{{ localize 'Name' }}"
+      />
+    </h1>
+  </header>
+  <div class="flexcol">
+    <textarea name="system.description">{{system.description}}</textarea>
+    <div class="flexrow">
+      <label>{{ localize 'MERP.weapon.type' }}</label>
+      <select name="system.type" class="flex2">
+        {{selectOptions config.weaponTypes selected=system.type localize=true}}
+      </select>
+    </div>
+    <div class="flexrow">
+      <label>{{ localize 'MERP.weapon.primaryCritical' }}</label>
+      <div class="flex2">
+        <select name="system.primaryCritical.type">
+          {{selectOptions config.criticalTypes selected=system.primaryCritical.type localize=true}}
+        </select>
+        <select name="system.primaryCritical.level">
+          {{selectOptions config.criticalLevels selected=system.primaryCritical.level localize=true}}
+        </select>
+      </div>
+    </div>
+    <div class="flexrow">
+      <label>{{ localize 'MERP.weapon.secondaryCritical' }}</label>
+      <div class="flex2">
+        <select name="system.secondaryCritical.type">
+          {{selectOptions config.criticalTypes selected=system.secondaryCritical.type localize=true}}
+        </select>
+        <select name="system.secondaryCritical.level">
+          {{selectOptions config.criticalLevels selected=system.secondaryCritical.level localize=true}}
+        </select>
+      </div>
+    </div>
+    <div class="flexrow">
+      <label>{{ localize 'MERP.weapon.range' }}</label>
+      <input
+        class="flex2"
+        name="system.range"
+        type="number"
+        value="{{system.range}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexrow">
+      <label>{{ localize 'MERP.weapon.weight' }}</label>
+      <input
+        class="flex2"
+        name="system.weight"
+        type="number"
+        value="{{system.weight}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexrow">
+      <label>{{ localize 'MERP.item.cost' }}</label>
+      <input
+        class="flex2"
+        name="system.cost"
+        type="number"
+        value="{{system.cost}}"
+        data-dtype="Number"
+      />
+    </div>
+  </div>
+  <pre>
+    {{log item}}
+    {{log data}}
+  </pre>
+</form>
