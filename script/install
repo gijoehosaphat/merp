@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-set -e
-
-rsync -a --exclude '.git/*' --exclude '.env' --delete ./ ~/Library/Application\ Support/FoundryVTT/Data/systems/merp

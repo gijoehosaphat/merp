@@ -1,0 +1,287 @@
+<table>
+  <tbody>
+    <tr>
+      <td width="50%" style="padding-right: 5px">
+        <div class="flexrow">
+          <label class="flex3"
+            >{{ localize "character.special.currentLevel" }}:</label
+          >
+          <input
+            name="system.special.currentLevel"
+            type="number"
+            value="{{ system.special.currentLevel }}"
+            min="1"
+            max="10"
+            data-dtype="Number"
+          />
+        </div>
+      </td>
+      <td>
+        <div class="flexrow">
+          <label class="flex3"
+            >{{ localize "character.special.experiencePoints" }}:</label
+          >
+          <input
+            name="system.special.experience"
+            type="number"
+            value="{{ system.special.experience }}"
+            data-dtype="Number"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-right: 5px">
+        <div class="flexrow">
+          <label>{{ localize "character.special.shield" }}:</label>
+          <input
+            name="system.special.shield"
+            type="checkbox"
+            {{
+            checked
+            system.special.shield
+            }}
+          />
+        </div>
+      </td>
+      <td>
+        <div class="flexrow">
+          <label>{{ localize "character.special.helmet" }}:</label>
+          <input
+            name="system.special.helmet"
+            type="checkbox"
+            {{
+            checked
+            system.special.helmet
+            }}
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="flexrow">
+          <label>{{ localize "character.special.legGrieves" }}:</label>
+          <input
+            name="system.special.legGrieves"
+            type="checkbox"
+            {{
+            checked
+            system.special.legGrieves
+            }}
+          />
+        </div>
+      </td>
+      <td>
+        <div class="flexrow">
+          <label>{{ localize "character.special.armGrieves" }}:</label>
+          <input
+            name="system.special.armGrieves"
+            type="checkbox"
+            {{
+            checked
+            system.special.armGrieves
+            }}
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label class="flex3"
+            >{{ localize "character.special.armorWorn" }}:</label
+          >
+          <select name="system.special.armorWorn">
+            <option value="">{{ localize "form.none" }}</option>
+            {{selectOptions sheet.itemsArmor selected=system.special.armorWorn localize=true}}
+          </select>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label class="flex3"
+            >{{ localize "character.special.wieldedWeapon1" }}:</label
+          >
+          <select name="system.special.wieldedWeapon1">
+            <option value="">{{ localize "form.none" }}</option>
+            {{selectOptions sheet.itemsWeapons selected=system.special.wieldedWeapon1 localize=true}}
+          </select>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label class="flex3"
+            >{{ localize "character.special.wieldedWeapon2" }}:</label
+          >
+          <select name="system.special.wieldedWeapon2">
+            <option value="">{{ localize "form.none" }}</option>
+            {{selectOptions sheet.itemsWeapons selected=system.special.wieldedWeapon2 localize=true}}
+          </select>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <td></td>
+      <td align="center">{{ localize "character.special.stat" }}</td>
+      <td align="center">{{ localize "character.special.items" }}</td>
+      <td align="center">{{ localize "character.special.special" }}</td>
+      <td align="center">{{ localize "character.special.totalBonus" }}</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ localize "character.special.defensiveBonus" }}</td>
+      <td width="18%" align="center">
+        <span class="sheetStat">
+          {{ localize "character.ability.agility.abbr" }}
+        </span>
+        <span class="sheetValue">{{
+          sheet.special.defensiveBonus.statBonus
+        }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{
+          sheet.special.defensiveBonus.itemBonus
+        }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{
+          sheet.special.defensiveBonus.specialBonus
+        }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{
+          sheet.special.defensiveBonus.totalBonus
+        }}</span>
+        {{ localize "character.rollType.db" }}
+      </td>
+    </tr>
+    <tr>
+      <td>{{ localize "character.special.essenceRRBonus" }}</td>
+      <td width="18%" align="center">
+        <span class="sheetStat">
+          {{ localize "character.ability.intelligence.abbr" }}
+        </span>
+        <span class="sheetValue">{{ sheet.special.essenceRR.statBonus }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{ sheet.special.essenceRR.itemBonus }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{
+          sheet.special.essenceRR.specialBonus
+        }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{ sheet.special.essenceRR.totalBonus }}</span>
+        {{ localize "character.rollType.rr" }}
+      </td>
+    </tr>
+    <tr>
+      <td>{{ localize "character.special.channelingRRBonus" }}</td>
+      <td width="18%" align="center">
+        <span class="sheetStat">
+          {{ localize "character.ability.intuition.abbr" }}
+        </span>
+        <span class="sheetValue">
+          {{ sheet.special.channelingRR.statBonus }}
+        </span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">
+          {{ sheet.special.channelingRR.itemBonus }}
+        </span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">
+          {{ sheet.special.channelingRR.specialBonus }}
+        </span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">
+          {{ sheet.special.channelingRR.totalBonus }}
+        </span>
+        {{ localize "character.rollType.rr" }}
+      </td>
+    </tr>
+    <tr>
+      <td>{{ localize "character.special.mentalismRRBonus" }}</td>
+      <td width="18%" align="center">
+        <span class="sheetStat">
+          {{ localize "character.ability.presence.abbr" }}
+        </span>
+        <span class="sheetValue">{{
+          sheet.special.mentalismRR.statBonus
+        }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{
+          sheet.special.mentalismRR.itemBonus
+        }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{
+          sheet.special.mentalismRR.specialBonus
+        }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{
+          sheet.special.mentalismRR.totalBonus
+        }}</span>
+        {{ localize "character.rollType.rr" }}
+      </td>
+    </tr>
+    <tr>
+      <td>{{ localize "character.special.poisonRRBonus" }}</td>
+      <td width="18%" align="center">
+        <span class="sheetStat">
+          {{ localize "character.ability.constitution.abbr" }}
+        </span>
+        <span class="sheetValue">{{ sheet.special.poisonRR.statBonus }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{ sheet.special.poisonRR.itemBonus }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{
+          sheet.special.poisonRR.specialBonus
+        }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{ sheet.special.poisonRR.totalBonus }}</span>
+        {{ localize "character.rollType.rr" }}
+      </td>
+    </tr>
+    <tr>
+      <td>{{ localize "character.special.diseaseRRBonus" }}</td>
+      <td width="18%" align="center">
+        <span class="sheetStat">
+          {{ localize "character.ability.constitution.abbr" }}
+        </span>
+        <span class="sheetValue">{{ sheet.special.diseaseRR.statBonus }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{ sheet.special.diseaseRR.itemBonus }}</span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">
+          {{ sheet.special.diseaseRR.specialBonus }}
+        </span>
+      </td>
+      <td align="center">
+        <span class="sheetValue">{{ sheet.special.diseaseRR.totalBonus }}</span>
+        {{ localize "character.rollType.rr" }}
+      </td>
+    </tr>
+  </tbody>
+</table>

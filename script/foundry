@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-#Sync the script to the FoundryVTT system directory
-./script/install
+
 
 open /Applications/Foundry\ Virtual\ Tabletop.app --args --remote-debugging-port=8315

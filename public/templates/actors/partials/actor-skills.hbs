@@ -2,54 +2,45 @@
   <table>
     <thead>
       <tr>
-        <td>{{ localize 'character.skillColumns.skill' }}</td>
-        <td>{{ localize 'character.skillColumns.rank5' }}</td>
-        <td>{{ localize 'character.skillColumns.rank2' }}</td>
-        <td>{{ localize 'character.skillColumns.rankBonus' }}</td>
-        <td>{{ localize 'character.skillColumns.statBonus' }}</td>
-        <td>{{ localize 'character.skillColumns.professionBonus' }}</td>
-        <td>{{ localize 'character.skillColumns.itemBonus' }}</td>
-        <td>{{ localize 'character.skillColumns.specialBonus' }}</td>
-        <td>{{ localize 'character.skillColumns.specialBonus' }}</td>
-        <td>{{ localize 'character.skillColumns.totalBonus' }}</td>
+        <td valign="bottom">{{ localize 'character.skillColumns.skill' }}</td>
+        <td valign="bottom">{{ localize 'character.skillColumns.rank5' }}</td>
+        <td valign="bottom">{{ localize 'character.skillColumns.rank2' }}</td>
+        <td valign="bottom">{{ localize 'character.skillColumns.rank1' }}</td>
+        <td></td>
+        <td width="6%" align="center" valign="bottom">
+          {{ localize 'character.skillColumns.rankBonus' }}
+        </td>
+        <td width="6%" align="center" valign="bottom">
+          {{ localize 'character.skillColumns.statBonus' }}
+        </td>
+        <td width="8%" align="center" valign="bottom">
+          {{ localize 'character.skillColumns.professionBonus' }}
+        </td>
+        <td width="6%" align="center" valign="bottom">
+          {{ localize 'character.skillColumns.itemBonus' }}
+        </td>
+        <td width="6%" align="center" valign="bottom">
+          {{ localize 'character.skillColumns.specialBonus' }}
+        </td>
+        <td width="6%" align="center" valign="bottom">
+          {{ localize 'character.skillColumns.specialBonus' }}
+        </td>
+        <td width="8%" align="center" valign="bottom">
+          {{ localize 'character.skillColumns.totalBonus' }}
+        </td>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>{{ localize 'MERP.weaponSkills.oneHandedEdged' }}</td>
-        <td>
-          <div class="flexrow">
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-          </div>
+      {{#each sheet.skills as |group|}}
+      <tr class="skillCategoryBorder">
+        <td colspan="11">
+          <strong> {{ localize group.name}}: </strong>
         </td>
-        <td>
-          <div class="flexrow">
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-            <div class="rank"></div>
-          </div>
-        </td>
-        <td>
-          25
-        </td>
-        <td>AG 10</td>
-        <td>5</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>45</td>
       </tr>
+      {{#each group.skills as |skill|}}
+      {{> "systems/merp/templates/actors/partials/actor-skills-row.hbs" skill=skill type=group.type }}
+      {{/each}}
+      {{/each}}
     </tbody>
   </table>
 </section>

@@ -8,27 +8,35 @@ dotenv.config()
 export default defineConfig({
   base: '/systems/merp',
   publicDir: 'public',
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern',
+      },
+    },
+  },
   build: {
     outDir: 'dist',
     rollupOptions: {
       input: [
         'src/module/merp.ts',
-        ...globSync('public/**/*.hbs').map((file) => {
+        ...globSync('public/templates/**/*.hbs').map((file) => {
           return fileURLToPath(new URL(file, import.meta.url))
         }),
       ],
       output: {
+        dir: 'dist',
+        entryFileNames: 'merp.js',
         assetFileNames: (assetInfo) => {
           return assetInfo.originalFileNames[0].replace('public/', '')
         },
-        dir: 'dist',
-        entryFileNames: 'merp.js',
         format: 'es',
+        inlineDynamicImports: false,
       },
     },
     watch: {
       include: 'src/**',
     },
   },
-  assetsInclude: ['public/**/*.hbs'],
+  assetsInclude: ['public/templates/**/*.hbs'],
 })

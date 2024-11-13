@@ -1,9 +1,38 @@
 {
   "character": {
+    "ability": {
+      "strength": { "long": "Strength", "abbr": "ST" },
+      "constitution": { "long": "Constitution", "abbr": "CO" },
+      "agility": { "long": "Agility", "abbr": "AG" },
+      "intelligence": { "long": "Intelligence", "abbr": "IG" },
+      "intuition": { "long": "Intuition", "abbr": "IT" },
+      "presence": { "long": "Presence", "abbr": "PR" },
+      "appearence": { "long": "Appearence", "abbr": "AP" }
+    },
+    "abilityColumns": {
+      "stat": "Stat (Abbr)",
+      "value": "Value",
+      "normalBonus": "Normal Roll",
+      "raceBonus": "Race Bonus",
+      "totalBonus": "Total Bonus"
+    },
+    "encumbrance": {
+      "encumbrance": "Encumbrance",
+      "weightModifier": "Wt. Mod."
+    },
+    "rollType": {
+      "mm": "MM",
+      "ob": "OB",
+      "sm": "SM",
+      "sp": "SP",
+      "rr": "RR",
+      "db": "DB"
+    },
     "skillColumns": {
       "skill": "Skill",
       "rank5": "5% Rank",
       "rank2": "2% Rank",
+      "rank1": "1% Rank",
       "rankBonus": "Rank Bonus",
       "statBonus": "Stat Bonus",
       "professionBonus": "Profession Bonus",
@@ -12,50 +41,160 @@
       "totalBonus": "Total Bonus"
     },
     "categoryNames": {
-      "movementAndManeuver": "Movement & Maneuver Skill Category:",
+      "movementAndManeuver": "Movement & Maneuver Skill Category",
       "weaponSkills": "Weapon Skill Skill Category",
+      "martialArts": "Martial Arts Skill Category",
       "generalSkills": "General Skill Category",
       "subterfugeSkills": "Subterfuge Skill Category",
       "magicalSkills": "Magical Skill Category",
+      "shapeShifting": "Shape Shifting Skill Category",
       "miscellaneousSkills": "Miscellaneous & Secondary Skills and Bonuses"
-    }
-  },
-  "MERP": {
-    "ability": {
-      "St": { "long": "Strength", "abbr": "st" },
-      "Co": { "long": "Constitution", "abbr": "co" },
-      "Ag": { "long": "Agility", "abbr": "ag" },
-      "Ig": { "long": "Intelligence", "abbr": "ig" },
-      "In": { "long": "Intuition", "abbr": "in" },
-      "Pr": { "long": "Presence", "abbr": "pr" }
     },
-    "criticalTypes": {
-      "heat": "Heat",
-      "cold": "Cold",
-      "electricity": "Electricity",
-      "impact": "Impact",
-      "crush": "Crush",
-      "slash": "Slash",
-      "puncture": "Puncture",
-      "unbalancing": "Unbalancing",
-      "grappling": "Grappling",
-      "largeCreaturePhysical": "Large Creature (Physical)",
-      "largeCreatureSpell": "Large Creature (Spell)"
-    },
-    "weaponSkills": {
+    "skills": {
+      "noArmor": "No Armor",
+      "softLeather": "Soft Leather",
+      "rigidLeather": "Rigid Leather",
+      "chain": "Chain",
+      "plate": "Plate",
       "oneHandedEdged": "One-Handed Edged",
+      "oneHandedEdgedOffHand": "One-Handed Edged (Off hand)",
       "oneHandedConcussion": "One-Handed Concussion",
+      "oneHandedConcussionOffHand": "One-Handed Concussion (Off hand)",
       "twoHanded": "Two-Handed",
       "thrown": "Thrown",
       "missile": "Missile",
-      "poleArms": "Pole Arms"
+      "poleArms": "Pole Arms",
+      "noviceStrike": "Novice Strike",
+      "standardStrike": "Standard Strike",
+      "expertStrike": "Expert Strike",
+      "noviceSweep": "Novice Sweep",
+      "standardSweep": "Standard Sweep",
+      "expertSweep": "Expert Sweep",
+      "adrenalDefense": "Adrenal Defense",
+      "climb": "Climb",
+      "ride": "Ride",
+      "swim": "Swim",
+      "track": "Track",
+      "ambush": "Ambush",
+      "stalkHide": "Stalk / Hide",
+      "pickLock": "Pick Lock",
+      "disarmTrap": "Disarm Trap",
+      "readRune": "Read Rune",
+      "useItem": "Use Item",
+      "directedSpells": "Directed Spells",
+      "shapeShifting": "Shape Change",
+      "perception": "Perception",
+      "bodyDevelopment": "Body Development",
+      "baseSpellOB": "Base Spell OB",
+      "leadershipAndInfluence": "Leadership & Influence"
     },
-    "weapon": {
-      "type": "Type",
-      "primaryCritical": "Primary Critical",
-      "secondaryCritical": "Secondary Critical",
-      "range": "Base Range",
-      "weight": "Weight"
+    "details": {
+      "name": "Name",
+      "cultureRace": "Culture / Race",
+      "profession": "Profession",
+      "age": "Age",
+      "realm": "Realm",
+      "gender": "Gender",
+      "height": "Height (in)",
+      "weight": "Weight (lbs)",
+      "hair": "Hair",
+      "eyes": "Eyes",
+      "demeanor": "Demeanor",
+      "personality": "Personality",
+      "motivation": "Motivation",
+      "alignment": "Alignment",
+      "special": "Special"
+    },
+    "special": {
+      "currentLevel": "Current Level",
+      "experiencePoints": "Experience",
+      "powerPoints": "Power Points",
+      "armorWorn": "Armor Worn",
+      "wieldedWeapon1": "Wielded Weapon 1",
+      "wieldedWeapon2": "Wielded Weapon 2",
+      "shield": "Shield",
+      "helmet": "Helmet",
+      "armGrieves": "Arm Grieves",
+      "legGrieves": "Leg Grieves",
+      "defensiveBonus": "Defensive Bonus",
+      "essenceRRBonus": "Essence RR",
+      "channelingRRBonus": "Channeling RR",
+      "mentalismRRBonus": "Mentalism RR",
+      "poisonRRBonus": "Poison RR",
+      "diseaseRRBonus": "Disease RR",
+      "stat": "Stat",
+      "items": "Items",
+      "special": "Special",
+      "totalBonus": "Total"
     }
+  },
+  "races": {
+    "hobbit": "Hobbit",
+    "umli": "Umli",
+    "dwarf": "Dwarf",
+    "wose": "Wose",
+    "man": "Man",
+    "dunadan": "Dunadan",
+    "halfElf": "Half Elf",
+    "silvanElf": "Silvan Elf",
+    "sindaElf": "Sinda Elf",
+    "noldoElf": "Noldo Elf",
+    "halfOrc": "Half-Orc",
+    "orc": "Orc",
+    "urukHai": "Uruk-Hai",
+    "halfTroll": "Half-Troll",
+    "troll": "Troll",
+    "ologHai": "Olog-Hai"
+  },
+  "realms": {
+    "channeling": "Channeling",
+    "essence": "Essence",
+    "mentalism": "Mentalism"
+  },
+  "criticalTypes": {
+    "heat": "Heat",
+    "cold": "Cold",
+    "electricity": "Electricity",
+    "impact": "Impact",
+    "crush": "Crush",
+    "slash": "Slash",
+    "puncture": "Puncture",
+    "unbalancing": "Unbalancing",
+    "grappling": "Grappling",
+    "largeCreaturePhysical": "Large Creature (Physical)",
+    "largeCreatureSpell": "Large Creature (Spell)"
+  },
+  "weapon": {
+    "type": "Type",
+    "primaryCritical": "Primary Critical",
+    "secondaryCritical": "Secondary Critical",
+    "range": "Base Range",
+    "weight": "Weight"
+  },
+  "genders": {
+    "male": "Male",
+    "female": "Female"
+  },
+  "professions": {
+    "warrior": "Warrior",
+    "mage": "Mage",
+    "animist": "Animist",
+    "scout": "Scout",
+    "ranger": "Ranger",
+    "bard": "Bard",
+    "barbarian": "Barbarian",
+    "burglar": "Burglar",
+    "conjurer": "Conjurer",
+    "civilian": "Civilian",
+    "explorer": "Explorer",
+    "monk": "Monk",
+    "rogue": "Rogue",
+    "scholar": "Scholar",
+    "shapeChanger": "Shape Changer",
+    "warriorMonk": "Warrior Monk",
+    "wizard": "Wizard"
+  },
+  "form": {
+    "none": "None"
   }
 }

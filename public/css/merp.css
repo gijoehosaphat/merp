@@ -1,6 +1,61 @@
-.rank {
-  width: 10px;
-  height: 10px;
+ul.ranks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+ul.ranks li {
+  width: 8px;
+  height: 8px;
   border: solid 1px #000000;
+  box-shadow: 1px 1px 1px #000000;
   margin-right: 2px;
+}
+
+ul.ranks li.filled {
+  background-color: #999999;
+}
+
+tr.skillCategoryBorder {
+  border-top: solid 1px #000000;
+}
+
+span.sheetValue {
+  display: inline-block;
+  width: 26px;
+  text-align: center;
+  border-bottom: solid 1px #000000;
+  color: #555555;
+  font-style: italic;
+}
+
+span.sheetStat {
+  display: inline-block;
+  width: 26px;
+  text-align: center;
+}
+
+span.sheetStatDouble {
+  font-size: 10px;
+  position: relative;
+  top: 4px;
+  margin-top: -6px;
+  margin-bottom: -4px;
+}
+
+.skillEditor {
+  display: flex;
+}
+
+.skillEditor button {
+  line-height: 12px;
+  height: 24px;
+}
+
+.skillEditorIncrement {
+}
+
+.skillEditorDecrement {
 }

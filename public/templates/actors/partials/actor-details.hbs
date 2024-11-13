@@ -1,0 +1,181 @@
+<table>
+  <tbody>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label>{{ localize "character.details.name" }}:</label>
+          <input
+            class="flex2"
+            name="name"
+            type="text"
+            value="{{ actor.name }}"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label>{{ localize "character.details.cultureRace" }}:</label>
+          <select name="system.details.race" class="flex2">
+            <option value="">{{ localize "form.none" }}</option>
+            {{selectOptions config.raceSelect selected=system.details.race localize=true}}
+          </select>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-right: 5px" width="60%">
+        <div class="flexrow">
+          <label>{{ localize "character.details.profession" }}:</label>
+          <select name="system.details.profession">
+            <option value="">{{ localize "form.none" }}</option>
+            {{selectOptions config.professionSelect selected=system.details.profession localize=true}}
+          </select>
+        </div>
+      </td>
+      <td>
+        <div class="flexrow">
+          <label>{{ localize "character.details.age" }}:</label>
+          <input
+            name="system.details.age"
+            type="text"
+            value="{{ system.details.age }}"
+            data-dtype="Number"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-right: 5px">
+        <div class="flexrow">
+          <label>{{ localize "character.details.realm" }}:</label>
+          <select name="system.details.realm">
+            <option value="">{{ localize "form.none" }}</option>
+            {{selectOptions config.realmSelect selected=system.details.realm localize=true}}
+          </select>
+        </div>
+      </td>
+      <td>
+        <div class="flexrow">
+          <label>{{ localize "character.details.gender" }}:</label>
+          <select name="system.details.gender">
+            <option value="">{{ localize "form.none" }}</option>
+            {{selectOptions config.genderSelect selected=system.details.gender localize=true}}
+          </select>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-right: 5px">
+        <div class="flexrow">
+          <label>{{ localize "character.details.height" }}:</label>
+          <input
+            name="system.details.height"
+            type="text"
+            value="{{ system.details.height }}"
+            data-dtype="Number"
+          />
+        </div>
+      </td>
+      <td>
+        <div class="flexrow">
+          <label>{{ localize "character.details.weight" }}:</label>
+          <input
+            name="system.details.weight"
+            type="text"
+            value="{{ system.details.weight }}"
+            data-dtype="Number"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-right: 5px">
+        <div class="flexrow">
+          <label>{{ localize "character.details.hair" }}:</label>
+          <input
+            name="system.details.hair"
+            type="text"
+            value="{{ system.details.hair }}"
+          />
+        </div>
+      </td>
+      <td>
+        <div class="flexrow">
+          <label>{{ localize "character.details.eyes" }}:</label>
+          <input
+            name="system.details.eyes"
+            type="text"
+            value="{{ system.details.eyes }}"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label>{{ localize "character.details.demeanor" }}:</label>
+          <input
+            class="flex2"
+            name="system.details.demeanor"
+            type="text"
+            value="{{ system.details.demeanor }}"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label>{{ localize "character.details.personality" }}:</label>
+          <input
+            class="flex2"
+            name="system.details.personality"
+            type="text"
+            value="{{ system.details.personality }}"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label>{{ localize "character.details.motivation" }}:</label>
+          <input
+            class="flex2"
+            name="system.details.motivation"
+            type="text"
+            value="{{ system.details.motivation }}"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label>{{ localize "character.details.alignment" }}:</label>
+          <input
+            class="flex2"
+            name="system.details.alignment"
+            type="text"
+            value="{{ system.details.alignment }}"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="flexrow">
+          <label>{{ localize "character.details.special" }}:</label>
+          <input
+            class="flex2"
+            name="system.details.special"
+            type="text"
+            value="{{ system.details.special }}"
+          />
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

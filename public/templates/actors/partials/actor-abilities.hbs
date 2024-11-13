@@ -1,0 +1,77 @@
+<table>
+  <thead>
+    <tr>
+      <td width="35%">{{ localize "character.abilityColumns.stat" }}</td>
+      <td width="12%">{{ localize "character.abilityColumns.value" }}</td>
+      <td width="2%"></td>
+      <td align="center">
+        {{ localize "character.abilityColumns.normalBonus" }}
+      </td>
+      <td align="center">
+        {{ localize "character.abilityColumns.raceBonus" }}
+      </td>
+      <td align="center">
+        {{ localize "character.abilityColumns.totalBonus" }}
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each system.abilities as |ability key|}}
+    <tr>
+      <td>
+        {{ localize (lookup (lookup ../sheet.abilities key) 'name') }}
+        ({{ localize (lookup (lookup ../sheet.abilities key) 'abbr') }})
+      </td>
+      <td>
+        <input
+          name="system.abilities.{{ key }}"
+          type="number"
+          value="{{ ability }}"
+          min="1"
+          max="102"
+          data-dtype="Number"
+        />
+      </td>
+      <td></td>
+      <td align="center">
+        <span
+          class="sheetValue"
+          >{{ lookup (lookup ../sheet.abilities key) 'normal' }}</span
+        >
+      </td>
+      <td align="center">
+        <span
+          class="sheetValue"
+          >{{ lookup (lookup ../sheet.abilities key) 'race' }}</span
+        >
+      </td>
+      <td align="center">
+        <span
+          class="sheetValue"
+          >{{ lookup (lookup ../sheet.abilities key) 'total' }}</span
+        >
+      </td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td colspan="6">
+        <span>{{ localize "character.encumbrance.encumbrance" }}</span>
+        <span class="sheetValue" style="width: 10%">
+          {{ sheet.encumbrance.encumbrancePenalty }}
+        </span>
+        =
+        <span class="sheetStat">
+          {{ localize "character.ability.strength.abbr" }}
+        </span>
+        <span class="sheetValue" style="width: 10%">
+          {{ sheet.encumbrance.statBonus }}
+        </span>
+        -
+        <span>{{ localize "character.encumbrance.weightModifier" }}</span>
+        <span class="sheetValue" style="width: 10%">
+          {{ sheet.encumbrance.weightModifier }}
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

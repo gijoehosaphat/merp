@@ -1,3 +1,10 @@
+import { genderSelect } from './character/genders'
+import { languages } from './character/languages'
+import { professionSelect } from './character/professions'
+import { races, raceSelect } from './character/races'
+import { realmSelect } from './character/realms'
+import { skills } from './character/skills'
+
 declare global {
   interface CONFIG {
     MERP: typeof MERP
@@ -6,17 +13,17 @@ declare global {
 
 export const MERP = {
   criticalTypes: {
-    heat: 'MERP.criticalTypes.heat',
-    cold: 'MERP.criticalTypes.cold',
-    electricity: 'MERP.criticalTypes.electricity',
-    impact: 'MERP.criticalTypes.impact',
-    crush: 'MERP.criticalTypes.crush',
-    slash: 'MERP.criticalTypes.slash',
-    puncture: 'MERP.criticalTypes.puncture',
-    unbalancing: 'MERP.criticalTypes.unbalancing',
-    grappling: 'MERP.criticalTypes.grappling',
-    largeCreaturePhysical: 'MERP.criticalTypes.largeCreaturePhysical',
-    largeCreatureSpell: 'MERP.criticalTypes.largeCreatureSpell',
+    heat: 'criticalTypes.heat',
+    cold: 'criticalTypes.cold',
+    electricity: 'criticalTypes.electricity',
+    impact: 'criticalTypes.impact',
+    crush: 'criticalTypes.crush',
+    slash: 'criticalTypes.slash',
+    puncture: 'criticalTypes.puncture',
+    unbalancing: 'criticalTypes.unbalancing',
+    grappling: 'criticalTypes.grappling',
+    largeCreaturePhysical: 'criticalTypes.largeCreaturePhysical',
+    largeCreatureSpell: 'criticalTypes.largeCreatureSpell',
   },
   criticalLevels: {
     t: 'T',
@@ -27,11 +34,18 @@ export const MERP = {
     e: 'E',
   },
   weaponTypes: {
-    oneHandedEdged: 'MERP.weaponSkills.oneHandedEdged',
-    oneHandedConcussion: 'MERP.weaponSkills.oneHandedConcussion',
-    twoHanded: 'MERP.weaponSkills.twoHanded',
-    thrown: 'MERP.weaponSkills.thrown',
-    missile: 'MERP.weaponSkills.missile',
-    poleArms: 'MERP.weaponSkills.poleArms',
+    oneHandedEdged: 'character.weaponSkills.oneHandedEdged',
+    oneHandedConcussion: 'character.weaponSkills.oneHandedConcussion',
+    twoHanded: 'character.weaponSkills.twoHanded',
+    thrown: 'character.weaponSkills.thrown',
+    missile: 'character.weaponSkills.missile',
+    poleArms: 'character.weaponSkills.poleArms',
   },
+  skills,
+  languages,
+  races,
+  raceSelect,
+  realmSelect,
+  genderSelect,
+  professionSelect,
 }

@@ -1,0 +1,66 @@
+<tr>
+  <td>{{localize skill.name}}</td>
+  <td>
+    {{#if skill.rankBonus includeZero=true}}
+    {{renderRanks skill.rank skill.maximumRank 5}}
+    {{/if}}
+  </td>
+  <td>
+    {{#if skill.rankBonus includeZero=true}}
+    {{renderRanks skill.rank skill.maximumRank 2}}
+    {{/if}}
+  </td>
+  <td>
+    {{#if skill.rankBonus includeZero=true}}
+    {{renderRanks skill.rank skill.maximumRank 1}}
+    {{/if}}
+  </td>
+  <td>
+    {{skillEditor type skill.type skill.rank}}
+  </td>
+  <td align="center">
+    {{#if skill.rankBonus includeZero=true}}
+    <span class="sheetValue">{{ skill.rankBonus }}</span>
+    {{else}}
+    xxxxx
+    {{/if}}
+  </td>
+  <td align="center">
+    {{#if skill.stat}}
+    <span class="sheetStat">{{localize skill.stat.name}}</span>
+    <span class="sheetValue">{{ skill.stat.value }}</span>
+    {{else}}
+    XXxxxxx
+    {{/if}}
+  </td>
+  <td align="center">
+    {{#if skill.professionBonus includeZero=true}}
+    <span class="sheetValue">{{ skill.professionBonus }}</span>
+    {{else}}
+    xxxxx
+    {{/if}}
+  </td>
+  <td align="center">
+    {{#if skill.itemBonus includeZero=true}}
+    <span class="sheetValue">{{ skill.itemBonus }}</span>
+    {{else}}
+    xxxxx
+    {{/if}}
+  </td>
+  <td align="center">
+    <span class="sheetValue">{{ skill.specialBonus1 }}</span>
+  </td>
+  <td align="center">
+    <span class="sheetValue">{{ skill.specialBonus2 }}</span>
+  </td>
+  <td align="center">
+    <span
+      class="sheetValue rollable"
+      data-roll="{{ skill.total }}"
+      data-label="{{localize skill.name}}"
+    >
+      {{ skill.total }}
+    </span>
+    {{rollType skill.totalBonusTypes}}
+  </td>
+</tr>
